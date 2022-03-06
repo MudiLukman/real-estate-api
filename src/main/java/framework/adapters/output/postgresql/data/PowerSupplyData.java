@@ -8,8 +8,7 @@ import java.util.UUID;
 
 @Getter
 @Setter
-@Entity
-@Table(name = "power_supplies")
+@Entity(name = "power_supplies")
 public class PowerSupplyData {
 
     @Id

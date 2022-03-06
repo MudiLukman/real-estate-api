@@ -8,8 +8,7 @@ import java.util.UUID;
 
 @Getter
 @Setter
-@Entity
-@Table(name = "tenants")
+@Entity(name = "tenants")
 public class TenantData {
 
     @Id
@@ -19,7 +18,7 @@ public class TenantData {
     @Column(name = "first_name")
     private String firstName;
 
-    @Column(name = "lastName")
+    @Column(name = "last_name")
     private String lastName;
 
     @Column(name = "phone")
