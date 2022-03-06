@@ -9,8 +9,7 @@ import java.util.UUID;
 
 @Getter
 @Setter
-@Entity
-@Table(name = "phases")
+@Entity(name = "phases")
 public class PhaseData {
 
     @Id
