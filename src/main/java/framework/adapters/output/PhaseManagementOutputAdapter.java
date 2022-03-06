@@ -11,7 +11,7 @@ import javax.persistence.PersistenceContext;
 import java.util.UUID;
 
 @ApplicationScoped
-public class PhaseManagementPostgresAdapter implements PhaseManagementOutputPort {
+public class PhaseManagementOutputAdapter implements PhaseManagementOutputPort {
 
     @PersistenceContext
     EntityManager entityManager;

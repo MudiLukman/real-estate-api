@@ -11,7 +11,7 @@ import javax.persistence.PersistenceContext;
 import java.util.UUID;
 
 @ApplicationScoped
-public class TenantManagementPostgresAdapter implements TenantManagementOutputPort {
+public class TenantManagementOutputAdapter implements TenantManagementOutputPort {
 
     @PersistenceContext EntityManager entityManager;
 
