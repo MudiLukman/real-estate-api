@@ -8,6 +8,7 @@ import framework.adapters.output.postgresql.mapper.HouseJPAMapper;
 import javax.enterprise.context.ApplicationScoped;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import javax.transaction.Transactional;
 import java.util.UUID;
 
 @ApplicationScoped
@@ -22,6 +23,7 @@ public class HouseManagementOutputAdapter implements HouseManagementOutputPort {
     }
 
     @Override
+    @Transactional
     public void persistHouse(House house) {
         HouseData houseData = HouseJPAMapper.toData(house);
         entityManager.persist(houseData);

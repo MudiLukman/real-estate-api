@@ -8,6 +8,7 @@ import framework.adapters.output.postgresql.mapper.TenantJPAMapper;
 import javax.enterprise.context.ApplicationScoped;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import javax.transaction.Transactional;
 import java.util.UUID;
 
 @ApplicationScoped
@@ -22,6 +23,7 @@ public class TenantManagementOutputAdapter implements TenantManagementOutputPort
     }
 
     @Override
+    @Transactional
     public Tenant persistTenant(Tenant tenant) {
         TenantData tenantData = TenantJPAMapper.toData(tenant);
         entityManager.persist(tenantData);
@@ -29,6 +31,7 @@ public class TenantManagementOutputAdapter implements TenantManagementOutputPort
     }
 
     @Override
+    @Transactional
     public void deleteTenant(UUID tenantId) {
         TenantData tenantData = entityManager.find(TenantData.class, tenantId);
         entityManager.remove(tenantData);

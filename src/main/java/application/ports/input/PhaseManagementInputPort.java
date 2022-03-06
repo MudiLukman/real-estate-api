@@ -8,12 +8,13 @@ import domain.value_objects.Personnel;
 import domain.value_objects.PowerSupply;
 
 import javax.enterprise.context.ApplicationScoped;
+import javax.inject.Inject;
 import java.util.UUID;
 
 @ApplicationScoped
 public class PhaseManagementInputPort implements PhaseManagementUseCase {
 
-    PhaseManagementOutputPort phaseManagementOutputPort;
+    @Inject PhaseManagementOutputPort phaseManagementOutputPort;
 
     @Override
     public Phase createPhase(UUID id, String name, Personnel personnel, PowerSupply powerSupply) {
