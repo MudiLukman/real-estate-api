@@ -11,7 +11,7 @@ import javax.persistence.PersistenceContext;
 import java.util.UUID;
 
 @ApplicationScoped
-public class HouseManagementPostgresAdapter implements HouseManagementOutputPort {
+public class HouseManagementOutputAdapter implements HouseManagementOutputPort {
 
     @PersistenceContext EntityManager entityManager;
 
