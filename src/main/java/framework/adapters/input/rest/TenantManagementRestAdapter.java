@@ -1,4 +1,4 @@
-package framework.adapters.input;
+package framework.adapters.input.rest;
 
 import application.use_cases.TenantManagementUseCase;
 import domain.entities.Tenant;
@@ -6,7 +6,7 @@ import domain.entities.Tenant;
 import javax.inject.Inject;
 import java.util.UUID;
 
-public class TenantManagementGenericAdapter {
+public class TenantManagementRestAdapter {
 
     @Inject
     TenantManagementUseCase tenantManagementUseCase;

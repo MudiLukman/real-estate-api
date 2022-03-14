@@ -8,6 +8,7 @@ import framework.adapters.output.postgresql.mapper.PhaseJPAMapper;
 import javax.enterprise.context.ApplicationScoped;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import javax.transaction.Transactional;
 import java.util.UUID;
 
 @ApplicationScoped
@@ -23,12 +24,14 @@ public class PhaseManagementOutputAdapter implements PhaseManagementOutputPort {
     }
 
     @Override
+    @Transactional
     public void removePhase(UUID phaseId) {
         PhaseData phaseData = entityManager.getReference(PhaseData.class, phaseId);
         entityManager.remove(phaseData);
     }
 
     @Override
+    @Transactional
     public void persistPhase(Phase phase) {
         PhaseData phaseData = PhaseJPAMapper.toData(phase);
         entityManager.persist(phaseData);

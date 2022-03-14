@@ -1,4 +1,4 @@
-package framework.adapters.input;
+package framework.adapters.input.rest;
 
 import application.use_cases.PhaseManagementUseCase;
 import domain.entities.House;
@@ -9,7 +9,7 @@ import domain.value_objects.PowerSupply;
 import javax.inject.Inject;
 import java.util.UUID;
 
-public class PhaseManagementGenericAdapter {
+public class PhaseManagementRestAdapter {
 
     @Inject
     PhaseManagementUseCase phaseManagementUseCase;

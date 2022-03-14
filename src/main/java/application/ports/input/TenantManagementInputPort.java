@@ -5,12 +5,13 @@ import application.use_cases.TenantManagementUseCase;
 import domain.entities.Tenant;
 
 import javax.enterprise.context.ApplicationScoped;
+import javax.inject.Inject;
 import java.util.UUID;
 
 @ApplicationScoped
 public class TenantManagementInputPort implements TenantManagementUseCase {
 
-    TenantManagementOutputPort tenantManagementOutputPort;
+    @Inject TenantManagementOutputPort tenantManagementOutputPort;
 
     @Override
     public Tenant createTenant(UUID id, String firstName, String lastName, String phone) {

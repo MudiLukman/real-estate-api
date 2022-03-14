@@ -10,12 +10,13 @@ import domain.value_objects.Address;
 import domain.value_objects.HouseType;
 
 import javax.enterprise.context.ApplicationScoped;
+import javax.inject.Inject;
 import java.util.UUID;
 
 @ApplicationScoped
 public class HouseManagementInputPort implements HouseManagementUseCase {
 
-    HouseManagementOutputPort houseManagementOutputPort;
+    @Inject HouseManagementOutputPort houseManagementOutputPort;
 
     @Override
     public House createHouse(UUID houseId, Address address, HouseType type) {
