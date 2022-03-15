@@ -97,8 +97,9 @@
       <artifactId>quarkus-undertow</artifactId>
     </dependency>
     <dependency>
-      <groupId>io.quarkus</groupId>
-      <artifactId>quarkus-arc</artifactId>
+      <groupId>com.google.api-client</groupId>
+      <artifactId>google-api-client</artifactId>
+      <version>1.32.1</version>
     </dependency>
   </dependencies>
   <build>
